@@ -1,0 +1,27 @@
+end2end_eval:
+  metrics:
+    text_block:
+      metric:
+        - Edit_dist
+        - BLEU
+        - METEOR
+    display_formula:
+      metric:
+        - Edit_dist
+        - CDM
+    table:
+      metric:
+        - TEDS
+        - Edit_dist
+    reading_order:
+      metric:
+        - Edit_dist
+  dataset:
+    dataset_name: end2end_dataset
+    ground_truth:
+      data_path: ./check_data/OmniDocBench.json
+    prediction:
+      data_path: ./output/check/gemini-2.0-flash-e2e
+    match_method: quick_match
+    # filter:
+    #   language: english
